@@ -45,6 +45,7 @@
     {
       "type": "ansible-local",
       "role_paths": [ "./roles" ],
-      "playbook_file": "./playbook/playbook.yml"
+      "playbook_file": "./playbook/playbook.yml",
+      "inventory_groups": "itsecw11"
     }]
 }
