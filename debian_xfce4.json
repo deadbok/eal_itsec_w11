@@ -26,16 +26,17 @@
 
         "shutdown_command": "echo {{user `ssh_pass`}} | sudo -S shutdown -P now",
 
-        "boot_command" : [
-            "<esc><esc><enter><wait>",
-            "/install/vmlinuz noapic ",
-            "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
-            "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
-            "hostname={{user `hostname`}} ",
-            "fb=false debconf/frontend=noninteractive ",
-            "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA ",
-            "keyboard-configuration/variant=USA console-setup/ask_detect=false ",
-            "initrd=/install/initrd.gz -- <enter>"
-        ]
+        "boot_command": [
+        "<esc><wait>",
+        "install",
+        " auto",
+        " url=https://raw.githubusercontent.com/deadbok/eal_itsec_w11/master/preseed.cfg",
+        " debian-installer=en_US",
+        " locale=en_US",
+        " keymap=us",
+        " netcfg/get_hostname={{user `hostname`}} ",
+        " netcfg/get_domain=localnet ",
+        "<enter>"
+      ]
     }]
 }
