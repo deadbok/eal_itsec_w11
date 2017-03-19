@@ -23,10 +23,12 @@ multiple platforms from a single source configuration.
 The ansible role that install XFCE is here:
 
 [https://github.com/deadbok/ansible-role-workstation-xfce4](https://github.com/deadbok/ansible-role-workstation-xfce4)
- 
+
 ### Ansible and Packer guides ###
 
 [https://www.azavea.com/blog/2014/10/09/creating-ansible-roles-from-scratch-part-1/](https://www.azavea.com/blog/2014/10/09/creating-ansible-roles-from-scratch-part-1/)
+
+[http://blog.endpoint.com/2014/03/provisioning-development-environment.html](http://blog.endpoint.com/2014/03/provisioning-development-environment.html)
 
 ### Ansible docs ###
 
