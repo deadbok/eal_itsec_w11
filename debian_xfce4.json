@@ -8,6 +8,8 @@
     "builders": [{
         "type": "virtualbox-iso",
         "guest_os_type": "Debian_64",
+        "headless": true,
+        "vm_name": "virtualbox-debian-xfce-desktop-base",
 
 
         "disk_size" : 10000,
@@ -40,11 +42,11 @@
         "<enter>"
       ]
     }],
-    
+
     "provisioners": [
     {
       "type": "ansible-local",
-      "role_paths": [ "./roles" ],
+      "role_paths": [ "./roles/ansible-role-workstation-xfce4" ],
       "playbook_file": "./playbook/playbook.yml",
       "inventory_groups": "itsecw11"
     }]
