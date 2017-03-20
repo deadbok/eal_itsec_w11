@@ -20,15 +20,15 @@ multiple platforms from a single source configuration.
 
 ### Packer flow ###
 
- * Dowload extgernal ISO images
+ * Download external ISO images
  * Create an HTTP server to serve files to the VM
  * Create VM
  * Create virtual HD
  * Boot the VM and serve `preseed.cfg` for unattended installation
     * `pressed.cfg` Sets up a basic Debian system with an SSH server and  ansible
- * Copy files for provsioning onto the machine using SSH
+ * Copy files for provisioning onto the machine using SSH
  * Run the ansible provisioning on the VM
- 
+
 
 ### Ansible role ###
 

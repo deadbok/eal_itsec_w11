@@ -1,4 +1,4 @@
 - hosts: itsecw11
-
+  become: true
   roles:
   - { role: ansible-role-workstation-xfce4 }

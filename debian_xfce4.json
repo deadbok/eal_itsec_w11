@@ -5,10 +5,11 @@
         "hostname": "packer-test"
     },
 
-    "builders": [{
+    "builders": [
+      {
         "type": "virtualbox-iso",
         "guest_os_type": "Debian_64",
-        "headless": true,
+        "headless": false,
         "vm_name": "virtualbox-debian-xfce-desktop-base",
 
 
@@ -41,13 +42,14 @@
         " netcfg/get_domain=localnet ",
         "<enter>"
       ]
-    }],
+    }
+  ],
 
-    "provisioners": [
+  "provisioners": [
     {
-      "type": "ansible-local",
-      "role_paths": [ "./roles/ansible-role-workstation-xfce4" ],
+      "type": "ansible",
       "playbook_file": "./playbook/playbook.yml",
-      "inventory_groups": "itsecw11"
-    }]
+      "extra_arguments": [ "-vvv" ]
+    }
+  ]
 }
